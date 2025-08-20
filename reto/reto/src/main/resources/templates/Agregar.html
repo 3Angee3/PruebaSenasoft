@@ -1,0 +1,47 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Formulario agregar</h1>
+<form th:object="${usuarios}" th:action="@{/usuarios/Agregar}" method="post">
+    <div class="form-group">
+        <label for="nombre">Nombre Completo</label>
+        <input th:field="*{nombre}" id="nombre" placeholder="Escribe el nombre del producto" type="text"
+               class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="correo">Correo</label>
+        <input th:field="*{correo}" id="correo" placeholder="Escribe el nombre del producto" type="text"
+               class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input th:field="*{password}" id="password" placeholder="Escribe el nombre del producto" type="text"
+               class="form-control">
+    </div>
+
+    <button class="btn btn-success" type="submit">Guardar</button>
+    &nbsp;<a class="btn btn-warning" th:href="@{/usuarios/Inicio}">Ver todos</a>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

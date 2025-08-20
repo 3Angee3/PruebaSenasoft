@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registro de Usuarios</title>
+</head>
+<body>
+<h1>Agregar Usuario</h1>
+<table>
+    <thead>
+    <form th:action="@usuarios">
+
+        <label>Nombre: </label>
+        <input type="text" th:field="nombre" th:name="nombre" required><br><br>
+        <label>correo: </label>
+        <input type="text" th:field="correo" required><br><br>
+        <label>password: </label>
+        <input type="text" th:field="contraseña" required><br><br>
+
+        <!-- <a class="btn btn-primary" href="" role="button">Link</a>
+         <button class="btn btn-primary" type="submit">Button</button>-->
+        <input class="btn btn-primary" type="submit" value="Submit">
+
+    </form>
+</table>
+</body>
+</html>

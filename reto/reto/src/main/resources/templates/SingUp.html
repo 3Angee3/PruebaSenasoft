@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Listado de Usuarios</title>
+</head>
+<body>
+<h1>lISTA AGREGAR</h1>
+<form th:action="@{/usuarios}" th:object="${usuarios/SingUp}" method="post">
+    <p>Nombre completo: <input type="text" th:field="*{nombre}" /></p>
+    <p>Correo: <input type="text" th:field="*{correo}" /></p>
+    <p>Password: <input type="text" th:field="*{contraseña}" /></p>
+
+    <p><button type="submit">Guardar</button></p>
+
+</form>
+</body>
+</html>
